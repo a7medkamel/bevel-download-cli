@@ -49,4 +49,6 @@ Used to fetch all the custom field definitions.
 
 ### `POST /rest/api/3/search`
 
-Used to search and download jira Issues
+Used to search and download jira Issues. We download all Issue fields, you can however use the Mask capability mentioned above to remove fields before they are writen to disk.
+
+> note that at no point do we ever download attachments
