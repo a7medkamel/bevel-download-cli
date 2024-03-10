@@ -32,3 +32,21 @@ npm run start -- --org YOU_ORG_NAME -c --no-obfuscate
 You can mask any fields deemed sensative by adding the json path of the field to the `./config-ts/default.ts` file under the `ticket.masks` config.
 
 For example you can blank out all Jira Issue descriptions by settings a mask for `"fields.description"`
+
+## APIs
+
+The following APIs are used by this downloader
+
+### `GET /rest/api/3/project/search`
+
+Used to find all the project names in this Jira instance
+
+### `GET /rest/api/3/field`
+
+Used to fetch all the custom field definitions.
+
+> as each org uses custome fields that we then map using the configs during the normalization phase
+
+### `POST /rest/api/3/search`
+
+Used to search and download jira Issues

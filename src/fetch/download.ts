@@ -43,8 +43,6 @@ async function searchForIssues(projects: string[], startAt: number, max: number)
     "fields": [
       "*all"
     ],
-    // "jql": `project = "${PROJECT}" AND statusCategory in ("To Do", "In Progress") ORDER BY updated DESC`,
-    // "jql": `project = "${project}"`,
     "jql": `project in (${list})`,
     "expand": [`changelog`],
     "maxResults": max,
